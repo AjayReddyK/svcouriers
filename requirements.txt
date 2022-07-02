@@ -51,6 +51,6 @@ uritemplate
 urllib3
 whitenoise
 python-dotenv
-beautifulsoup
+bs4
 requests
 
