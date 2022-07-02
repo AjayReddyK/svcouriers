@@ -1,0 +1,6 @@
+/api/token/
+/api/token/refresh/
+/api/user/register/
+/api/user/listorders/
+/api/user/showorders/
+/api/user/createorder/

@@ -1,0 +1,239 @@
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  .navbar{
+    background-color: rgb(40, 70, 93) !important;
+  }
+/* .navbar a:active {
+    font-weight: bold !important;
+    border-bottom: 1px solid #565387 !important;
+} */
+
+/* .navbar .nav-item a:active {
+    font-weight: bold !important;
+    border-bottom: 1px solid #565387 !important;
+} */
+
+/* a[class="menu_active"] {
+    border-bottom: 1px solid black !important;
+  } */
+/* .menu_active{
+    font-weight: bold !important;
+    border-bottom: 1px solid #565387 !important;
+} */
+
+
+
+#header {
+    width: 100%;
+    margin-top: 60px;
+}
+
+#header h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    color: black;
+}
+#header .brand-name{
+    color:#3498db;
+}
+
+#header h2{
+    color:#484848;
+    font-size:24px;
+}
+
+.header-img{
+    text-align: right;
+}
+
+#header .animated{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px)
+    }
+}
+
+.card2:hover{
+    box-shadow:
+    0 3px 6px 0px rgba(0, 0, 0, 0.1), 0 4px 15px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.card :hover{
+    box-shadow: none;
+}
+
+.navbar {
+    height: 80px;
+    position: sticky;
+    top: -16px;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    /* PSEUDO ELEMENTS to create drop-shadow */
+    /* SHADOW */
+    /* COVER */
+}
+.navbar::before, .navbar::after {
+    content: "";
+    display: block;
+    height: 16px;
+    /* make pseudo elements sticky as well */
+    position: sticky;
+}
+.navbar::before {
+    top: 48px;
+    /* shadow is at bottom of element, so at 48 + 16 = 64px */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.navbar::after {
+    /* linear gradient from background color to transparent acts as
+    a transition effect so the shadow appears gradually */
+    background: linear-gradient(white 10%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.4) 70%, transparent);
+    top: 0;
+    /* cover should fall over shadow */
+    z-index: 2;
+}
+.navbar .is-toolbar {
+    height: 64px;
+    position: sticky;
+    top: 0px;
+    /* compensate for shadow with negative margin */
+    margin-top: -16px;
+    /* content should fall over shadow and cover */
+    z-index: 3;
+}
+/*navbar End*/
+.test-navbar {
+    border: 1px solid red;
+}
+@media (max-width: 992px) {
+    .navbar-light .navbar-brand {
+        color: white;
+    }
+    .navbar-light .navbar-toggler {
+        color: white;
+        border-color: white;
+    }
+    .navbar-light .navbar-toggler-icon {
+        background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
+    }
+    
+    .navbar-collapse.collapsing .navbar-nav {
+        /* display: block; */
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -45%;
+        transition: 0.5s;
+        background-color:#003147;
+        
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        position: fixed;
+        top: 0;
+        /* bottom: 0; */
+        left: 0;
+        /* flex-direction: column; */
+        /* height: auto; */
+        width: 300px;
+        height: 100vh;
+        /* transition: left 0.35s ease; */
+        /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+        transition: 0.5s;
+        background-color: #003147;
+       
+    
+    }
+    ul {
+        position:relative;
+        
+    }
+
+    ul li {
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0px;
+       
+    }
+     ul li :hover{
+        background: #03a9f4;
+        color: white !important;
+        padding: 10px;
+        
+    }
+    ul li a{
+        color: white !important;
+        text-decoration: none;
+        font-size: 1.5em;
+        letter-spacing:2px;
+        text-indent: 1.5em;
+
+    }
+   /* .navbar a{
+       color: #ffffff;
+   } */
+    /* .true{
+        font-weight: bold !important;
+        border-bottom: aliceblue;
+        color: #3498db;
+    } */
+}
+
+@media (min-width: 992px){
+      
+    .navbar-brand{
+        font-size: 1.9 rem !important;
+        color:#565387 !important ;
+    }
+    .collapse {
+        height: 100%;
+    }
+    .navbar a{
+         font-size: 1.3rem;
+         text-transform: capitalize;
+         color: white !important;
+    }
+    
+    .navbar ul {
+          height: 100%;
+         
+      }
+    .navbar li{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .navbar li:hover{
+        border-bottom: 3px solid;
+        bottom:0;
+        left:0; 
+        border-color: #f64;
+    }
+    .navbar a:hover {
+        color:  white !important;
+        
+        border-radius: 20px;
+    
+    }
+    .true{
+        border-bottom: 3px solid;
+        font-weight: bold;
+       
+        border-color: rgb(201, 109, 81);
+    }
+}
