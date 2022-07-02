@@ -54,4 +54,7 @@ python-dotenv
 bs4
 requests
 pandas
+psycopg2
+psycopg2-binary
+python-dotenv
 
